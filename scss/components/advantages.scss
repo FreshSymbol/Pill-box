@@ -1,0 +1,62 @@
+.advantages {
+  &__title {
+    @extend %block-title;
+  }
+  .card {
+    &__item {
+      min-height: 320px;
+      padding: 25px;
+      flex: 0 1 30%;
+      background-color: $light-pink;
+      &:nth-child(even) {
+        background-color: $light-blue;
+      }
+    }
+    &__img {
+      margin: 20px auto;
+    }
+    &__title {
+      margin: 20px auto;
+
+      font-family: Inter, sans-serif;
+      font-size: rem(26);
+      font-weight: bold;
+    }
+    &__text {
+      font-family: Inter, sans-serif;
+      font-size: rem(18);
+      font-weight: normal;
+    }
+  }
+}
+
+@include desktop {
+  .advantages {
+    &__title {
+      font-size: rem(44);
+    }
+  }
+}
+
+@include laptop {
+  .advantages {
+    &__title {
+      font-size: rem(42);
+    }
+  }
+}
+
+@include tablet {
+  .advantages {
+    &__title {
+      font-size: rem(40);
+    }
+    .card {
+      flex-wrap: wrap;
+      &__item {
+        margin-bottom: 40px;
+        flex-basis: 100%;
+      }
+    }
+  }
+}

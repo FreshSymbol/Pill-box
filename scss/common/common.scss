@@ -1,0 +1,73 @@
+.page {
+  max-width: $page-width;
+  margin: 0 auto;
+  background-color: $page-bg;
+  color: $black;
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+section {
+  margin: 80px auto;
+}
+
+.btn {
+  display: inline-block;
+  width: 70%;
+  padding: 20px;
+  margin: 20px 0;
+
+  font-family: Inter, sans-serif;
+  font-size: rem(30);
+  font-weight: 500;
+  color: $black;
+
+  border-radius: 10px;
+  background-color: $pink;
+  transition: all 0.2s linear;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 5px 10px $dark-pink;
+  }
+
+  &:active {
+    background-color: #f3b1d1;
+    translate: 0 1px;
+  }
+}
+
+.text-pink {
+  color: $dark-pink;
+}
+
+.swiper {
+  height: 600px;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: 520px;
+  background-color: $white;
+  border: 3px solid $lilac;
+}
+
+.swiper-pagination-bullet {
+  width: 68px;
+  height: 11px;
+  background-color: $white;
+  border-radius: 15px;
+}

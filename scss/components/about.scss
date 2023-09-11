@@ -1,0 +1,62 @@
+.about {
+  &__item {
+    flex: 1 1 50%;
+    align-self: center;
+  }
+  &__title {
+    @extend %block-title;
+    text-align: center;
+  }
+  &__text {
+    font-family: Inter sans-serif;
+    font-size: rem(30);
+    font-weight: 500;
+  }
+}
+
+@include desktop {
+  .about {
+    .row {
+      flex-wrap: wrap;
+    }
+    &__item {
+      margin-bottom: 40px;
+      flex: 0 0 48%;
+    }
+    &__title {
+      font-size: rem(38);
+    }
+    &__text {
+      font-size: rem(26);
+    }
+  }
+}
+
+@include laptop {
+  .about {
+    &__title {
+      font-size: rem(36);
+    }
+    &__text {
+      font-size: rem(24);
+    }
+  }
+}
+
+@include tablet {
+  .about {
+    .row {
+      flex-wrap: wrap;
+    }
+    &__item {
+      margin-bottom: 40px;
+      flex: 1 0 100%;
+    }
+    &__title {
+      font-size: rem(40);
+    }
+    &__text {
+      font-size: rem(24);
+    }
+  }
+}

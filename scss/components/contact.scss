@@ -1,0 +1,202 @@
+.contact {
+  position: relative;
+  &__item {
+    flex: 0 1 42%;
+  }
+  &__img-open-pill-box {
+    position: absolute;
+    top: -15%;
+    left: 5%;
+    z-index: 2;
+  }
+  &__img-pill-box {
+    position: absolute;
+    left: 16%;
+    bottom: -35%;
+  }
+  &__title {
+    @extend %block-title;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-family: Inter, sans-serif;
+    font-size: rem(24);
+    font-weight: normal;
+
+    text-align: left;
+  }
+  .form {
+    &__input {
+      width: 100%;
+      margin-top: 30px;
+      padding: 20px 25px;
+
+      font-family: Inter, sans-serif;
+      font-size: rem(24);
+      font-weight: 300;
+      color: $grey;
+
+      border: 2px solid $grey;
+      border-radius: 8px;
+      &:focus,
+      &:hover {
+        color: $black;
+        outline: 2px solid $grey;
+        background-color: $white;
+      }
+      &:not(:focus):invalid {
+        box-shadow: none;
+        outline-color: $grey;
+      }
+      &:invalid {
+        box-shadow: 0 0 15px red;
+      }
+    }
+    &__text {
+      margin-top: 20px;
+
+      font-family: Inter, sans-serif;
+      font-size: rem(24);
+      font-weight: reg;
+      color: $grey;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+@include desktop {
+  .contact {
+    &__img-open-pill-box {
+      scale: 0.7;
+      top: -20%;
+      left: 0;
+    }
+    &__img-pill-box {
+      scale: 0.7;
+      left: 8%;
+      bottom: -25%;
+    }
+    &__title {
+      font-size: rem(40);
+    }
+    &__text {
+      font-size: rem(20);
+    }
+    .form {
+      &__input {
+        font-size: rem(20);
+      }
+      &__text {
+        margin-top: 10px;
+        font-size: rem(16);
+      }
+      .btn {
+        font-size: rem(22);
+      }
+    }
+  }
+}
+
+@include laptop {
+  .contact {
+    &__img-open-pill-box {
+      scale: 0.6;
+      top: -25%;
+      left: -10%;
+    }
+    &__img-pill-box {
+      scale: 0.6;
+      left: 0;
+      bottom: -25%;
+    }
+    &__title {
+      font-size: rem(36);
+    }
+    &__text {
+      font-size: rem(18);
+    }
+    .form {
+      &__input {
+        font-size: rem(16);
+      }
+      &__text {
+        font-size: rem(14);
+      }
+      .btn {
+        font-size: rem(20);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .contact {
+    .row {
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+    position: relative;
+    &__item {
+      flex: 0 1 80%;
+    }
+    &__img-open-pill-box {
+      position: relative;
+      top: 0;
+      scale: 0.8;
+    }
+    &__img-pill-box {
+      scale: 0.8;
+      top: 55%;
+      left: 20%;
+    }
+    &__title {
+      font-size: rem(40);
+    }
+    &__text {
+      font-size: rem(20);
+    }
+    .form {
+      &__input {
+        font-size: rem(16);
+      }
+      &__text {
+        font-size: rem(16);
+      }
+      .btn {
+        font-size: rem(20);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .contact {
+    position: relative;
+    &__item {
+      flex: 1 1 100%;
+    }
+    &__img-pill-box {
+      top: 70%;
+      left: 10%;
+    }
+    &__title {
+      font-size: rem(40);
+    }
+    &__text {
+      font-size: rem(20);
+    }
+    .form {
+      &__input {
+        font-size: rem(16);
+      }
+      &__text {
+        font-size: rem(16);
+      }
+      .btn {
+        font-size: rem(20);
+      }
+    }
+  }
+}

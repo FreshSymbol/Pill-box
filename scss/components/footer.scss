@@ -1,0 +1,109 @@
+.footer {
+  margin-top: 150px;
+  padding: 20px;
+  background-color: $light-purle;
+  &__title {
+    @extend %block-title;
+    display: none;
+  }
+  .nav {
+    ul {
+      border-left: 3px solid $grey;
+    }
+    .lable {
+      margin-right: 10px;
+    }
+    &__item {
+      flex: 0 1 25%;
+
+      align-self: center;
+      padding-left: 20px;
+      text-align: left;
+    }
+    &__item-title {
+      margin-bottom: 20px;
+
+      font-family: Iner, sans-serif;
+      font-size: rem(24);
+      font-weight: 600;
+    }
+    &__link {
+      display: inline-block;
+      margin-bottom: 10px;
+
+      font-family: Iner, sans-serif;
+      font-size: rem(20);
+      font-weight: normal;
+      color: $black;
+      &:focus,
+      &:hover {
+        text-decoration: 2px underline;
+      }
+      &:active {
+        text-shadow: 0 0 15px $black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    padding: 20px;
+    &__title {
+      margin-bottom: 40px;
+      font-size: rem(40);
+    }
+    .nav {
+      &__item {
+        padding-left: 20px;
+      }
+      &__item-title {
+        font-size: rem(20);
+      }
+      &__link {
+        font-size: rem(16);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .footer {
+    padding: 20px;
+    &__title {
+      display: block;
+      font-size: rem(40);
+    }
+    .nav {
+      align-items: flex-start;
+      &__item {
+        padding-left: 20px;
+        flex: 0 0 33%;
+        &:first-child {
+          display: none;
+        }
+      }
+      &__item-title {
+        margin-bottom: 10px;
+        font-size: rem(20);
+      }
+      &__link {
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+      &__item {
+        margin-bottom: 40px;
+        align-self: flex-start;
+      }
+    }
+  }
+}

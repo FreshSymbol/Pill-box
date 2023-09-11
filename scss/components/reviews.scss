@@ -1,0 +1,145 @@
+.reviews {
+  &__title {
+    @extend %block-title;
+  }
+  .card {
+    flex-wrap: wrap;
+    text-align: left;
+    &__item {
+      padding: 30px 50px;
+      margin-bottom: 80px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 0 1 48%;
+
+      background: linear-gradient(140deg, $light-blue, $light-pink);
+
+      .block-title {
+        align-items: flex-start;
+      }
+
+      .block-person {
+        margin-top: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        &__rating {
+          margin: 0 40px;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 30px;
+      flex: 0 1 80%;
+
+      font-family: Inter, sans-serif;
+      font-size: rem(21);
+      font-weight: bold;
+    }
+    &__text {
+      font-family: Inter, sans-serif;
+      font-size: rem(18);
+      font-weight: normal;
+    }
+    &__text-name {
+      margin-bottom: 5px;
+
+      font-family: Inter, sans-serif;
+      font-size: rem(18);
+      font-weight: bold;
+    }
+  }
+}
+
+@include desktop {
+  .reviews {
+    &__title {
+      font-size: rem(44);
+    }
+  }
+}
+
+@include laptop {
+  .reviews {
+    &__title {
+      margin-bottom: 40px;
+      font-size: rem(42);
+    }
+    .card {
+      &__item {
+        padding: 40px;
+        margin-bottom: 40px;
+        flex: 0 0 48%;
+        .block-title {
+          align-items: flex-start;
+        }
+        .block-person {
+          align-items: center;
+          margin-top: 20px;
+          &__rating {
+            margin: 0 20px;
+          }
+        }
+      }
+      &__title {
+        font-size: rem(22);
+      }
+      &__text {
+        font-size: rem(18);
+      }
+      &__text-name {
+        margin-bottom: 10px;
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .reviews {
+    &__title {
+      font-size: rem(40);
+    }
+    .card {
+      &__item {
+        flex: 1 0 100%;
+      }
+      &__title {
+        font-size: rem(26);
+      }
+      &__text {
+        font-size: rem(20);
+      }
+      &__text-name {
+        margin-bottom: 10px;
+        font-size: rem(20);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .reviews {
+    .card {
+      &__item {
+        padding: 20px;
+        .block-person {
+          &__rating {
+            margin: 0 10px;
+          }
+        }
+      }
+      &__title {
+        font-size: rem(18);
+      }
+      &__text {
+        font-size: rem(16);
+      }
+      &__text-name {
+        margin-bottom: 5px;
+        font-size: rem(16);
+      }
+    }
+  }
+}

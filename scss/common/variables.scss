@@ -1,0 +1,25 @@
+@use "sass:math";
+$page-width: 1600px;
+$container-width: 1400px;
+
+$page-bg: #ebebeb;
+$white: #fff;
+$black: #000;
+$pink: #f8bdda;
+$light-pink: #f9dae2;
+$dark-pink: #d96e9b;
+$light-blue: #d3ddff;
+$violet: #8f6dcd;
+$light-purle: #dacfef;
+$grey: #b4b4b4;
+$lilac: #70719f;
+
+$breakpoint-xxl: 1200px;
+$breakpoint-xl: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 600px;
+
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
